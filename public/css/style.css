@@ -1,0 +1,53 @@
+body {
+	margin: 0 auto;
+	padding: 0 auto;
+	background-color: #fbfbfb;
+
+}
+
+.container-fluid {
+  border: 0;
+  padding: 0;
+}
+
+.maincontent {
+   margin: 5px;
+   padding: 5px;
+}
+
+.sidebar {
+	background-color: #222d32;
+	/*position: absolute;*/
+	float: left;
+  padding-top: 50px;
+    min-height: 100%;
+    width: 230px;
+    z-index: 810;
+    color: #fff;
+}
+
+
+
+.side-bar .list-group-item {
+  border: 0;
+  border-radius: 3px;
+
+}
+
+.list-group-item {
+  color: black;
+}
+
+.side-bar a:hover{
+  background-color: #f4f4f5;
+}
+
+.side-bar .list-group-item.active {
+  background: #ea0c3c;
+}
+
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: "/ ";
+    padding: 0 5px;
+}

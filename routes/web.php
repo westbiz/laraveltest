@@ -15,7 +15,7 @@ Route::get('/', 'Home\HomeController@index');
 
 Route::resource('articles', 'ArticlesController');
 
-Route::resource('/admin', 'AdminController');
+Route::resource('/admin', 'Admin\AdminsController')->middleware('auth');
 
 // Route::get('/articles/', 'ArticlesController@index');
 
