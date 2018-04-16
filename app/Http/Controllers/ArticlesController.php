@@ -6,6 +6,7 @@ use App\Article;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ArticlesController extends Controller {
 	/**
@@ -19,6 +20,10 @@ class ArticlesController extends Controller {
 		// $articles = Article::latest()->published()->get();
 		// $articles = DB::table('articles')->simplePaginate(3); //
 		return view('articles.index', compact('articles'));
+	}
+
+	public function upload() {
+		return view('articles.upload');
 	}
 
 	/**
@@ -93,4 +98,5 @@ class ArticlesController extends Controller {
 	public function destroy($id) {
 		//
 	}
+
 }

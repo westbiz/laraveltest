@@ -13,6 +13,8 @@
 
 Route::get('/', 'Home\HomeController@index');
 
+Route::get('/articles/upload', 'ArticlesController@upload');
+
 Route::resource('articles', 'ArticlesController');
 
 Route::resource('/admin', 'Admin\AdminsController')->middleware('auth');
