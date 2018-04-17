@@ -19,18 +19,25 @@ body {
   margin-right: 0px;
   margin-left: 0px;
   padding-left: 0px;
+  padding-right: 0px;
 }
 
 .side-bar {
 	background-color: #4fb9e9;
 	/*position: absolute;*/
+  float: left;
   padding-top: 50px;
-    min-height: 100%;
-    width: 100%;
-    /*z-index: 810;*/
-    color: #fff;
+  min-height: 100%;
+  width: 230px;
+  z-index: 810;
+  color: #fff;
 }
 
+.main-content {
+
+  float: right;
+
+}
 
 
 .side-bar .list-group-item {
