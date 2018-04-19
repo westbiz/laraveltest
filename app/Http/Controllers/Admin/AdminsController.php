@@ -12,7 +12,7 @@ class AdminsController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
-		return view('admins.index');
+		return view('admins.home');
 	}
 
 	/**

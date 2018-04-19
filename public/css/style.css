@@ -4,6 +4,35 @@ body {
 	background-color: #fbfbfb;
 
 }
+ul, li {
+  list-style: none;
+}
+
+#content{
+  overflow:hidden;
+}
+.left{
+  width:230px; 
+  margin-bottom:-3000px; 
+  padding-bottom:3000px; 
+  background:#cad5eb; 
+  float:left;
+}
+.right{
+  width:200px; 
+  margin-bottom:-3000px; 
+  padding-bottom:3000px; 
+  background:#f0f3f9; 
+  float:right;
+}
+.center{
+  margin:0 0 0 250px; 
+  background:#fbfbfb; 
+  height:1000px;
+}
+
+
+
 
 .container-fluid {
 
@@ -22,27 +51,17 @@ body {
   padding-right: 0px;
 }
 
-.side-bar {
-	background-color: #4fb9e9;
-	/*position: absolute;*/
-  float: left;
-  padding-top: 50px;
-  min-height: 100%;
-  width: 230px;
-  z-index: 810;
-  color: #fff;
-}
+
 
 .main-content {
-
-  float: right;
+  padding: 5px;
 
 }
 
 
 .side-bar .list-group-item {
   border: 0;
-  border-radius: 3px;
+  border-radius: 0px;
 
 }
 
