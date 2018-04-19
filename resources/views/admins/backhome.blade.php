@@ -13,9 +13,21 @@
     <link href="{{ asset('css/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/css/bootstrap-grid.css') }}" rel="stylesheet">
     <link href="{{ asset('css/css/bootstrap-grid.css') }}" rel="stylesheet">
+    <script type="text/javascript" src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    <script type="text/javascript">
+  $(document).ready(function() {
+    $("#hide").click(function(){
+    $(".left").hide();
+    });
+    $("#show").click(function(){
+    $(".left").show();
+    });
+  });
+</script>
 </head>
 <body>
 
@@ -29,11 +41,7 @@
   @include('admins.footer')
 </div>
 
-<script>
-  $(function () {
-    $('#myList a:last-child').tab('show')
-  })
-</script>
+
 
 
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
