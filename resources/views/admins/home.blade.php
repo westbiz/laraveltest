@@ -46,7 +46,11 @@
       <h2>Travel</h2>
       <!-- List group -->
       <div class="list-group side-bar" id="myList" role="tablist">
-        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
+        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">国内旅游</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">出境旅游</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">旅游包车</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#home" role="tab">Home</a>
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">国内旅游</a>
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">出境旅游</a>
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">旅游包车</a>
@@ -58,15 +62,8 @@
       <div class="row">
         <div class="col-sm-12">
           <!-- 导航路径 -->
-          <div class="bread">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Library</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Data</li>
-              </ol>
-            </nav>
-          </div>
+          <h2>分类管理</h2>
+          <hr class="aez">
           <div class="main-content">
             <!-- content -->
             <!-- Tab panes -->
@@ -76,13 +73,15 @@
               <div class="tab-pane" id="messages" role="tabpanel">出境旅游</div>
               <div class="tab-pane" id="settings" role="tabpanel">旅游包车</div>
             </div>
-            <button id="hide" type="button">隐藏</button>
-<button id="show" type="button">显示</button>
           </div>
         </div>
       </div>
       </div>
+      <div class="footer">
+        <p>© Company 2017</p>
+      </div>
     </div>
+
   </div>
 
 
