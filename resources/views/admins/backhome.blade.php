@@ -12,7 +12,7 @@
 
     <link href="{{ asset('css/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/css/bootstrap-grid.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/css/bootstrap-grid.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/css/bootstrap-reboot.css') }}" rel="stylesheet">
     <script type="text/javascript" src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
 
     <!-- Styles -->

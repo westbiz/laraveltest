@@ -43,9 +43,9 @@
   </div>
   <div id="content">
     <div class="left">
-      <h2>Travel</h2>
       <!-- List group -->
       <div class="list-group side-bar" id="myList" role="tablist">
+        <div class="card-header">分类管理</div>
         <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a>
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">国内旅游</a>
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">出境旅游</a>
@@ -55,6 +55,7 @@
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">出境旅游</a>
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">旅游包车</a>
       </div>
+
     </div>
     <!-- center -->
     <div class="center">
@@ -62,7 +63,7 @@
       <div class="row">
         <div class="col-sm-12">
           <!-- 导航路径 -->
-          <h2>分类管理</h2>
+          <h3>分类管理</h3>
           <hr class="aez">
           <div class="main-content">
             <!-- content -->
@@ -76,9 +77,6 @@
           </div>
         </div>
       </div>
-      </div>
-      <div class="footer">
-        <p>© Company 2017</p>
       </div>
     </div>
 
