@@ -4,53 +4,16 @@
 
 @section('content')
 
-  <div class="topnav">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">TX后台管理</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">分类管理</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              业务管理
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-  </div>
   <div id="content">
     <div class="left">
       <!-- List group -->
       <div class="list-group side-bar" id="myList" role="tablist">
         <div class="card-header">分类管理</div>
         <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">国内旅游</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">出境旅游</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">旅游包车</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#home" role="tab">Home</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#categories" role="tab">分类管理</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#members" role="tab">会员管理</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#products" role="tab">产品管理</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#advertises" role="tab">广告管理</a>
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">国内旅游</a>
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">出境旅游</a>
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">旅游包车</a>
@@ -62,17 +25,43 @@
       <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
-          <!-- 导航路径 -->
-          <h3>分类管理</h3>
-          <hr class="aez">
           <div class="main-content">
             <!-- content -->
             <!-- Tab panes -->
             <div class="tab-content">
-              <div class="tab-pane active" id="home" role="tabpanel">Home</div>
-              <div class="tab-pane" id="profile" role="tabpanel">国内旅游</div>
-              <div class="tab-pane" id="messages" role="tabpanel">出境旅游</div>
-              <div class="tab-pane" id="settings" role="tabpanel">旅游包车</div>
+              <div class="tab-pane active" id="home" role="tabpanel">
+                <div class="jumbotron">
+                  <h1 class="display-3">Welcome Back!</h1>
+                  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                  <hr class="m-y-md">
+                  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                  <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="#" role="button">See more</a>
+                  </p>
+                </div>
+              </div>
+              <div class="tab-pane" id="categories" role="tabpanel">
+                <h3>分类管理</h3>
+                <hr class="m-y-md">
+                <div class="list-group">
+  <a class="list-group-item" href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; 首页</a>
+  <a class="list-group-item" href="#"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; 关于我们</a>
+  <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp; 后台应用编辑</a>
+  <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; 系统设置</a>
+</div>
+              </div>
+              <div class="tab-pane" id="members" role="tabpanel">
+                <h3>会员管理</h3>
+                <hr class="aez">
+              </div>
+              <div class="tab-pane" id="products" role="tabpanel">
+                <h3>产品管理</h3>
+                <hr class="aez">
+              </div>
+              <div class="tab-pane" id="advertises" role="tabpanel">
+                <h3>广告管理</h3>
+                <hr class="aez">
+              </div>
             </div>
           </div>
         </div>
@@ -81,8 +70,6 @@
     </div>
 
   </div>
-
-
 
 
 

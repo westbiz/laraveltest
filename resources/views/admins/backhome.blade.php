@@ -13,6 +13,9 @@
     <link href="{{ asset('css/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/css/bootstrap-grid.css') }}" rel="stylesheet">
     <link href="{{ asset('css/css/bootstrap-reboot.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+
     <script type="text/javascript" src="{{ asset('js/jquery-1.12.4.min.js') }}"></script>
 
     <!-- Styles -->
@@ -30,9 +33,12 @@
 </script>
 </head>
 <body>
-
 <div class="container-fluid">
-  @yield('content')
+    @include('admins.nav')
+
+</div>
+<div class="container-fluid">
+    @yield('content')
 
 
 </div>
