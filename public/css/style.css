@@ -68,7 +68,9 @@ hr {
   padding-right: 0px;*/
 }
 
-
+/*.navbar {
+  background: #004085;
+}*/
 
 .main-content {
   padding: 5px;
@@ -104,7 +106,10 @@ hr {
   background-color: #f4f4f5;
 }
 
-
+.side-bar .card-header {
+  background: #004085;
+  color: white;
+}
 
 .breadcrumb > li + li:before {
     color: #CCCCCC;

@@ -19,6 +19,8 @@ Route::resource('articles', 'ArticlesController');
 
 Route::resource('/admin', 'Admin\AdminsController')->middleware('auth');
 
+Route::resource('/categories', 'CategoriesController');
+
 // Route::group(['prefix' => 'admin'], function () {
 // 	Route::get('/categoriesadmin', function () {
 // 		//

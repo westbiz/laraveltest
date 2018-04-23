@@ -31,10 +31,6 @@
             <a class="nav-link disabled" href="#">Disabled</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
         <li class="nav-item">
           <!-- Authentication Links -->
           @guest
@@ -43,6 +39,7 @@
           @else
               <li class="nav-item dropdown">
                   <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
                       {{ Auth::user()->name }} <span class="caret"></span>
                   </a>
 
@@ -50,7 +47,7 @@
                       <a class="dropdown-item" href="{{ route('logout') }}"
                          onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">
-                          {{ __('注销') }}
+                          {{ __('退出') }}
                       </a>
 
                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -60,6 +57,11 @@
               </li>
           @endguest
         </li>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
       </div>
     </nav>
   </div>

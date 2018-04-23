@@ -8,15 +8,21 @@
     <div class="left">
       <!-- List group -->
       <div class="list-group side-bar" id="myList" role="tablist">
-        <div class="card-header">分类管理</div>
-        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#categories" role="tab">分类管理</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#members" role="tab">会员管理</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#products" role="tab">产品管理</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#advertises" role="tab">广告管理</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">国内旅游</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">出境旅游</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">旅游包车</a>
+        <div class="card-header">Manage List</div>
+        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">
+          <i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Home</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#categories" role="tab">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; 分类管理</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#members" role="tab">
+          <i class="fa fa-user-o" aria-hidden="true"></i>&nbsp; 会员管理</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#products" role="tab">
+          <i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; 产品管理</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#advertises" role="tab">
+          <i class="fa fa-flag" aria-hidden="true"></i>&nbsp; 广告管理</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">
+          <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp; 日程管理</a>
+         <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">
+          <i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; 系统设置</a>
       </div>
 
     </div>
@@ -43,24 +49,22 @@
               <div class="tab-pane" id="categories" role="tabpanel">
                 <h3>分类管理</h3>
                 <hr class="m-y-md">
-                <div class="list-group">
-  <a class="list-group-item" href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; 首页</a>
-  <a class="list-group-item" href="#"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; 关于我们</a>
-  <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp; 后台应用编辑</a>
-  <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; 系统设置</a>
-</div>
+                <p>@include('categories.index')</p>
               </div>
               <div class="tab-pane" id="members" role="tabpanel">
                 <h3>会员管理</h3>
                 <hr class="aez">
+                <p>...</p>
               </div>
               <div class="tab-pane" id="products" role="tabpanel">
                 <h3>产品管理</h3>
                 <hr class="aez">
+                <p>...</p>
               </div>
               <div class="tab-pane" id="advertises" role="tabpanel">
                 <h3>广告管理</h3>
                 <hr class="aez">
+                <p>...</p>
               </div>
             </div>
           </div>
