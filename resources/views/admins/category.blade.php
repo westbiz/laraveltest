@@ -1,7 +1,7 @@
 
 	<h1>Categories</h1>
 	<hr>
-	<table class="table">
+{{-- 	<table class="table">
 	  <thead class="thead-dark">
 	    <tr>
 	      <th scope="col">#</th>
@@ -21,5 +21,5 @@
 
 	  </tbody>
 	  @endforeach
-	</table>
+	</table> --}}
 {{-- 	{{ $categories->links() }} --}}

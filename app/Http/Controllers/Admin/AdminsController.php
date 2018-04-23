@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,9 @@ class AdminsController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
-		return view('admins.home');
+		$categories = Category::paginate(5);
+		// $categories->withPath('categories/url');
+		return view('admins.home', compact('categories'));
 	}
 
 	/**
