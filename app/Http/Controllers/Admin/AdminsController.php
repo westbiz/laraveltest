@@ -14,8 +14,8 @@ class AdminsController extends Controller {
 	 */
 	public function index() {
 		$categories = Category::paginate(5);
-		// $categories->withPath('categories/url');
-		return view('admins.home', compact('categories'));
+		$categories->withPath('admin/categories/q');
+		return view('admins.welcome', compact('categories'));
 	}
 
 	/**

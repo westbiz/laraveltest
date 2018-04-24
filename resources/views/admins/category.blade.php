@@ -1,7 +1,10 @@
+@extends('admins.layout')
 
-	<h1>Categories</h1>
-	<hr>
-{{-- 	<table class="table">
+@section('title', '后台管理')
+
+@section('tabshow')
+
+	<table class="table">
 	  <thead class="thead-dark">
 	    <tr>
 	      <th scope="col">#</th>
@@ -21,5 +24,8 @@
 
 	  </tbody>
 	  @endforeach
-	</table> --}}
-{{-- 	{{ $categories->links() }} --}}
+	</table>
+	{{ $categories->links() }}
+
+
+@stop

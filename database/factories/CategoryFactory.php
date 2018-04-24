@@ -9,6 +9,6 @@ $factory->define(App\Category::class, function (Faker $faker) {
 		'parent_id' => function () {
 			return factory(App\User::class)->create()->id;
 		},
-		'descrition' => $faker->sentence,
+		'description' => $faker->sentence,
 	];
 });

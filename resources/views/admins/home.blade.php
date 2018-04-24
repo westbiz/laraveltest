@@ -19,7 +19,7 @@
           <i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; 产品管理</a>
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#advertises" role="tab">
           <i class="fa fa-flag" aria-hidden="true"></i>&nbsp; 广告管理</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#schedule" role="tab">
           <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp; 日程管理</a>
          <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">
           <i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; 系统设置</a>
@@ -63,6 +63,16 @@
               </div>
               <div class="tab-pane" id="advertises" role="tabpanel">
                 <h3>广告管理</h3>
+                <hr class="aez">
+                <p>...</p>
+              </div>
+              <div class="tab-pane" id="schedule" role="tabpanel">
+                <h3>日程管理</h3>
+                <hr class="aez">
+                <p>...</p>
+              </div>
+              <div class="tab-pane" id="settings" role="tabpanel">
+                <h3>系统设置</h3>
                 <hr class="aez">
                 <p>...</p>
               </div>
