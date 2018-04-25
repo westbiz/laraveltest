@@ -1,8 +1,4 @@
-@extends('admins.layout')
 
-@section('title', '后台管理')
-
-@section('tabshow')
 	<table class="table">
 	  <thead class="thead-dark">
 	    <tr>
@@ -25,4 +21,3 @@
 	  @endforeach
 	</table>
 	{{ $categories->links() }}
-@stop
