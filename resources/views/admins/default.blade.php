@@ -24,6 +24,7 @@
 
 </head>
 <body>
+
 <div class="container-fluid">
     @include('admins.nav')
 
@@ -36,37 +37,11 @@
       <!-- List group -->
       <div class="list-group side-bar" id="myList">
         <div class="card-header">Manage List</div>
-        <li><a target="fname" class="list-group-item list-group-item-action {{ Request::getPathInfo() != '/welcome'?'active':'' }}" href="{{ url('welcome') }} }}">
-          <i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Home</a></li>
-        @forelse($categories as $category)
+        @foreach($categories as $category)
+        <li><a target="fname" class="list-group-item list-group-item-action" href="{{ route('categories.index') }}">{{$category->name}}</a></li>
+        @endforeach
 
-        <li><a target="fname" class="list-group-item list-group-item-action {{ Request::getPathInfo() == '/categories'?'active':'' }}" href="{{ route('categories.index') }}">
-          <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; 分类管理</a></li>
-          @empty
-        <p>暂无内容</p>
-        @endforelse
-
-        <li><a target="fname" class="list-group-item list-group-item-action" href="#members">
-          <i class="fa fa-user-o" aria-hidden="true"></i>&nbsp; 会员管理</a></li>
-        <li><a target="fname" class="list-group-item list-group-item-action" href="#products">
-          <i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; 产品管理</a></li>
-        <li><a target="fname" class="list-group-item list-group-item-action" href="#advertises">
-          <i class="fa fa-flag" aria-hidden="true"></i>&nbsp; 广告管理</a></li>
-        <li><a target="fname" class="list-group-item list-group-item-action" href="#schedule">
-          <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp; 日程管理</a></li>
-         <li><a target="fname" class="list-group-item list-group-item-action" href="#settings">
-          <i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; 系统设置</a></li>
       </div>
-      @section('leftmenu')
-                <div class="list-group">
-                    <a href="{{url('student/index')}}" class="list-group-item
-                    {{Request::getPathInfo()!='/student/create'?'active':''}}
-                            ">学生列表</a>
-                    <a target="fname" href="{{url('student/create')}}" class="list-group-item
-                    {{Request::getPathInfo()=='/student/create'?'active':''}}
-                            ">新增学生</a>`
-                </div>
-            @show
     </div>
 
     <div class="center">
