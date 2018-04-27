@@ -14,7 +14,7 @@
             <a class="nav-link" href="/admin/category">分类管理 <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">管理</a>
+            <a class="nav-link" href="#">管理员管理</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

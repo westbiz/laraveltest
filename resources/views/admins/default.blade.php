@@ -28,20 +28,13 @@
 <div class="container-fluid">
     @include('admins.nav')
 
-
-
-
 </div>
 <div class="container-fluid">
    <div class="left">
       <!-- List group -->
-      <div class="list-group side-bar" id="myList">
-        <div class="card-header">Manage List</div>
-        @foreach($categories as $category)
-        <li><a target="fname" class="list-group-item list-group-item-action" href="{{ route('categories.index') }}">{{$category->name}}</a></li>
-        @endforeach
+      @section('sidebar')
 
-      </div>
+      @show
     </div>
 
     <div class="center">
@@ -51,9 +44,7 @@
           <div class="main-content">
             <!-- content -->
             <!-- Tab panes -->
-            <iframe name="fname" id="myiframe" frameborder="false" style="background-color: red;" width="100%" >
-                123
-            </iframe>
+            @yield('content')
           </div>
         </div>
       </div>
