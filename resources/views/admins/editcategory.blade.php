@@ -8,7 +8,7 @@
   <div class="list-group side-bar" id="myList" role="tablist">
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#home" role="tab">
           <i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Home</a>
-        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#categories" role="tab">
+        <a class="list-group-item list-group-item-action active" href="{{ url('admin/categories') }}">
           <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; 分类管理</a>
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#members" role="tab">
           <i class="fa fa-user-o" aria-hidden="true"></i>&nbsp; 会员管理</a>
