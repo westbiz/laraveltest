@@ -35,6 +35,7 @@
       @section('sidebar')
 
       @show
+      {{-- @include('admins.leftmenu') --}}
     </div>
 
     <div class="center">
@@ -51,10 +52,10 @@
       </div>
     </div>
 
-<script type="text/javascript">
+{{-- <script type="text/javascript">
     var ifm= document.getElementById("myiframe");
     ifm.height=document.documentElement.clientHeight;
-</script>
+</script> --}}
 
 </div>
 

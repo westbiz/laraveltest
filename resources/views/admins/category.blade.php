@@ -3,7 +3,8 @@
 @section('title', '后台管理')
 
 @section('sidebar')
-<div class="list-group side-bar" id="myList">
+	@include('admins.leftmenu')
+{{-- <div class="list-group side-bar" id="myList">
   <div class="card-header">Manage List</div>
   <div class="list-group side-bar" id="myList" role="tablist">
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#home" role="tab">
@@ -22,7 +23,7 @@
           <i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; 系统设置</a>
       </div>
 
-</div>
+</div> --}}
 @endsection
 
 

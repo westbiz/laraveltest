@@ -13,9 +13,10 @@ class AdminsController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
-		$categories = Category::paginate(2);
+		$catalogs = Category::where('parent_id', '=', 0)->get();
+		$categories = Category::where('parent_id', '=', 0)->paginate(5);
 		// $categories->withPath('admin/categories/q');
-		return view('admins.editcategory', compact('categories'));
+		return view('admins.welcome', compact('categories', 'catalogs'));
 	}
 
 	/**

@@ -1,9 +1,15 @@
-@extends('admins.layout')
+@extends('admins.default')
 
 @section('title', '后台管理')
 
-@section('welcome')
-	@parent
+@section('sidebar')
+    @include('admins.leftmenu')
+
+
+@endsection
+
+@section('content')
+
 	<div class="jumbotron">
 		<h1 class="display-3">Welcome Back!</h1>
 		<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>

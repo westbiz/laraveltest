@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #fbfbfb;
+	background-color: #eeeeee;
 
 }
 ul, li {
@@ -31,12 +31,12 @@ hr {
   width:200px; 
   margin-bottom:-3000px; 
   padding-bottom:3000px; 
-  background:#f0f3f9; 
+  background: #eeeeee; 
   float:right;
 }
 .center{
-  margin:0 0 0 230px; 
-  background:#fbfbfb; 
+  margin:0 0 0 220px; 
+  background: #eeeeee; 
   height:1000px;
 }
 
@@ -73,8 +73,10 @@ hr {
 }*/
 
 .main-content {
-  padding: 5px;
-
+  padding: 15px;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 2px  #888888;
+  border-radius: 3px;
 }
 
 
@@ -98,8 +100,8 @@ hr {
 .side-bar .list-group-item.active {
   padding-left: 20px; 
   background: #ea0c3c;
-  padding-top: 12px;
-  padding-bottom: 12px;   
+/*  padding-top: 12px;
+  padding-bottom: 12px;   */
 }
 
 .side-bar a:hover{

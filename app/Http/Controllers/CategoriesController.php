@@ -16,8 +16,10 @@ class CategoriesController extends Controller {
 	public function index() {
 		//
 		// return 'category...';
-		$categories = Category::paginate(5);
-		return view('admins.editcategory', compact('categories'));
+		$catalogs = Category::where('parent_id', '=', 0)->get();
+		$childcatas = Category::where('parent_id', '=', 1)->get();
+		$categories = Category::paginate(3);
+		return view('admins.categorylist', compact('categories', 'catalogs', '$childcatas'));
 	}
 
 	/**
@@ -27,6 +29,9 @@ class CategoriesController extends Controller {
 	 */
 	public function create() {
 		//
+		$catalogs = Category::where('parent_id', '=', 0)->get();
+		$categories = Category::paginate(3);
+		return view('admins.createcategory', compact('categories', 'catalogs'));
 	}
 
 	/**
@@ -37,6 +42,8 @@ class CategoriesController extends Controller {
 	 */
 	public function store(Request $request) {
 		//
+		dd($request->all());
+
 	}
 
 	/**
@@ -58,6 +65,9 @@ class CategoriesController extends Controller {
 	 */
 	public function edit($id) {
 		//
+		$catalogs = Category::where('parent_id', '=', 0)->get();
+		$categories = Category::paginate(3);
+		return view('admins.editcategory', compact('categories', 'catalogs'));
 	}
 
 	/**
@@ -79,5 +89,6 @@ class CategoriesController extends Controller {
 	 */
 	public function destroy($id) {
 		//
+
 	}
 }

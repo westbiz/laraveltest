@@ -17,7 +17,11 @@
 	    <li class="breadcrumb-item active" aria-current="page">Data</li>
 	  </ol>
 	</nav>
-	<h3>编辑分类</h3>
+	<h3>创建分类</h3>
 	<hr class="aez">
+	{!! Form::open(['url'=>'/admin/categories']) !!}
+		@include('admins.categoryform')
+
+	{!! Form::close() !!}
 
 @stop

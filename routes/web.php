@@ -17,13 +17,18 @@ Route::get('/articles/upload', 'ArticlesController@upload');
 
 Route::resource('articles', 'ArticlesController');
 
-Route::get('/admin/categories/', 'CategoriesController@index');
+// Route::get('/admin/categories/', 'CategoriesController@index');
 
 // Route::resource('/admin/', 'Admin\AdminsController')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('/admin/', 'Admin\AdminsController');
-	Route::get('admin/categories', 'CategoriesController@index');
+	Route::get('/admin/home', 'Admin\AdminsController@index');
+	// Route::get('/admin/welcome', 'Admin\AdminsController@index');
+	Route::get('/admin/categories', 'CategoriesController@index');
+	Route::get('/admin/categories/create', 'CategoriesController@create');
+	Route::get('/admin/categories/edit/{id}', 'CategoriesController@edit');
+	Route::post('/admin/categories', 'CategoriesController@store');
 });
 
 Route::resource('/categories', 'CategoriesController');

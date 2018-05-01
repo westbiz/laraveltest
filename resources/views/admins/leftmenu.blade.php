@@ -1,20 +1,24 @@
 <div class="list-group side-bar" id="myList">
   <div class="card-header">Manage List</div>
   <div class="list-group side-bar" id="myList" role="tablist">
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#home" role="tab">
+    <a href="{{ url('admin') }}" class="list-group-item list-group-item-action {{ Request::getPathInfo()=='/admin'?'active':'' }}">
+      <i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Home</a>
+    @foreach($catalogs as $catalog)
+      <a href="{{ url('admin/'.$catalog->url) }}" class="list-group-item list-group-item-action {{ Request::getPathInfo()=='/admin/'.$catalog->url?'active':'' }}">
+      <i class="{{ $catalog->icon }}" aria-hidden="true"></i>&nbsp; {{$catalog->name}}</a>
+    @endforeach
+      </div>
+</div>
+
+
+{{-- <div class="list-group side-bar" id="myList">
+  <div class="card-header">Manage List</div>
+  <div class="list-group side-bar" id="myList" role="tablist">
+        <a href="{{ url('admin') }}" class="list-group-item list-group-item-action {{ Request::getPathInfo()=='/admin'?'active':'' }}">
           <i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Home</a>
-        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#categories" role="tab">
+        <a href="{{ url('admin/categories') }}" class="list-group-item list-group-item-action {{ Request::getPathInfo()=='/admin/categories'?'active':'' }}">
           <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; 分类管理</a>
         <a class="list-group-item list-group-item-action" data-toggle="list" href="#members" role="tab">
           <i class="fa fa-user-o" aria-hidden="true"></i>&nbsp; 会员管理</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#products" role="tab">
-          <i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; 产品管理</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#advertises" role="tab">
-          <i class="fa fa-flag" aria-hidden="true"></i>&nbsp; 广告管理</a>
-        <a class="list-group-item list-group-item-action" data-toggle="list" href="#schedule" role="tab">
-          <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp; 日程管理</a>
-         <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">
-          <i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; 系统设置</a>
       </div>
-
-</div>
+</div> --}}
