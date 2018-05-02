@@ -5,7 +5,6 @@
 @section('sidebar')
     @include('admins.leftmenu')
 
-
 @endsection
 
 @section('content')

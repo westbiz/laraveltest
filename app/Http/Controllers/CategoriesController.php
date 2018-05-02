@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -19,7 +20,7 @@ class CategoriesController extends Controller {
 		$catalogs = Category::where('parent_id', '=', 0)->get();
 		$childcatas = Category::where('parent_id', '=', 1)->get();
 		$categories = Category::paginate(3);
-		return view('admins.categorylist', compact('categories', 'catalogs', '$childcatas'));
+		return view('admins.categorylist', compact('categories', 'catalogs', 'childcatas'));
 	}
 
 	/**
@@ -40,10 +41,11 @@ class CategoriesController extends Controller {
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(Request $request) {
+	public function store(Requests\CreateCategoryRequest $request) {
 		//
-		dd($request->all());
 
+		dd($request->all());
+		return redirect('/admins/categories');
 	}
 
 	/**
@@ -66,8 +68,8 @@ class CategoriesController extends Controller {
 	public function edit($id) {
 		//
 		$catalogs = Category::where('parent_id', '=', 0)->get();
-		$categories = Category::paginate(3);
-		return view('admins.editcategory', compact('categories', 'catalogs'));
+		$category = Category::findOrFail($id);
+		return view('admins.editcategory', compact('category', 'catalogs'));
 	}
 
 	/**

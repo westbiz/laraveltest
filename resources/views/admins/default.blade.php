@@ -44,6 +44,8 @@
         <div class="col-sm-12">
           <div class="main-content">
             <!-- content -->
+            @section('bread')
+            @show
             <!-- Tab panes -->
             @yield('content')
           </div>

@@ -19,5 +19,12 @@
 	</nav>
 	<h3>编辑分类</h3>
 	<hr class="aez">
+	{!! Form::model($category,['method'=>'patch','url'=>'/admin/categories/'.$category->id]) !!}
+		@include('admins.categoryform')
+
+	{!! Form::close() !!}
+
+	@include('errors.list')
+
 
 @stop
