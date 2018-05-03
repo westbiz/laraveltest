@@ -67,7 +67,9 @@ class CategoriesController extends Controller {
 	 */
 	public function edit($id) {
 		//
-		$catalogs = Category::where('parent_id', '=', 0)->get();
+		// $catas = array();
+		$catalogs = Category::where('parent_id', '=', 0)->get(['id', 'name']);
+		// dd($catalogs);
 		$category = Category::findOrFail($id);
 		return view('admins.editcategory', compact('category', 'catalogs'));
 	}
