@@ -4,19 +4,23 @@ namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
-class AdminsController extends Controller {
+class CategoryController extends Controller {
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
+		//
+		// return 'category...';
 		$catalogs = Category::where('parent_id', '=', 0)->get();
-		$categories = Category::where('parent_id', '=', 0)->paginate(5);
-		// $categories->withPath('admin/categories/q');
-		return view('admins.welcome', compact('categories', 'catalogs'));
+		$childcatas = Category::where('parent_id', '=', 1)->get();
+		$categories = Category::paginate(3);
+		return view('admins.categorylist', compact('categories', 'catalogs', 'childcatas'));
 	}
 
 	/**
@@ -25,7 +29,11 @@ class AdminsController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function create() {
-		//
+		//where('parent_id', '=', 0)->get()
+		$catalogs = Category::all();
+		$parents = $catalogs->pluck('name', 'id');
+		$categories = Category::paginate(3);
+		return view('admins.createcategory', compact('categories', 'catalogs', 'parents'));
 	}
 
 	/**
@@ -34,8 +42,11 @@ class AdminsController extends Controller {
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(Request $request) {
+	public function store(Requests\CreateCategoryRequest $request) {
 		//
+
+		dd($request->all());
+		return redirect('/admins/categories');
 	}
 
 	/**
@@ -46,6 +57,7 @@ class AdminsController extends Controller {
 	 */
 	public function show($id) {
 		//
+		return 'show category';
 	}
 
 	/**
@@ -56,6 +68,14 @@ class AdminsController extends Controller {
 	 */
 	public function edit($id) {
 		//
+		// $catalogs = array();
+		// $catalogs = Category::pluck('name', 'id');
+		$catalogs = Category::where('parent_id', '=', 0)->get();
+		// $catalogs = Category::with('allChildrenCategories')->first();
+		// $catalogs = $catas->allChildrenCategories;
+		// dd($catalogs);
+		$category = Category::findOrFail($id);
+		return view('admins.editcategory', compact('category', 'catalogs'));
 	}
 
 	/**
@@ -65,8 +85,10 @@ class AdminsController extends Controller {
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(Request $request, $id) {
+	public function update(Requests\CreateCategoryRequest $request, $id) {
 		//
+		//
+		return 'update';
 	}
 
 	/**
@@ -77,5 +99,6 @@ class AdminsController extends Controller {
 	 */
 	public function destroy($id) {
 		//
+
 	}
 }

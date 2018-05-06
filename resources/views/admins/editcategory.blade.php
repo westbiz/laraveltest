@@ -1,10 +1,10 @@
 @extends('admins.default')
 
-@section('title', 'TX管理系统')
+@section('title', '编辑分类')
 
 @section('sidebar')
 
-	@include('admins.leftmenu')
+	{{-- @include('admins.leftmenu') --}}
 
 @endsection
 
@@ -22,6 +22,7 @@
 	{!! Form::model($category,['method'=>'patch','url'=>'/admin/categories/'.$category->id]) !!}
 		<div class="form-group">
 			{!! Form::label('parent_id','上级分类: ')!!}
+			{{-- array($catalogs[0]->id => $catalogs[0]->name) --}}
 			{!! Form::select('parent_id', $catalogs, null, ['class' => 'input-sm form-control', 'placeholder' => '请选择一个分类']) !!}
 
 		</div>

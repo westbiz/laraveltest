@@ -1,10 +1,10 @@
 @extends('admins.default')
 
-@section('title', 'TX管理系统')
+@section('title', '新增分类')
 
 @section('sidebar')
 
-	@include('admins.leftmenu')
+	{{-- @include('admins.leftmenu') --}}
 
 @endsection
 
@@ -20,7 +20,34 @@
 	<h3>创建分类</h3>
 	<hr class="aez">
 	{!! Form::open(['url'=>'/admin/categories']) !!}
-		@include('admins.categoryform')
+		<div class="form-group">
+			{!! Form::label('parent_id','上级分类: ')!!}
+			{!! Form::select('parent_id', $parents, null, ['class' => 'input-sm form-control', 'placeholder' => '请选择一个分类']) !!}
+		</div>
+
+		<div class="form-group">
+			{!! Form::label('name', '分类名称: ')!!}
+			{!! Form::text('name', null, ['class'=>'form-control']) !!}
+		</div>
+
+		<div class="form-group">
+			{!! Form::label('description','描述: ')!!}
+			{!! Form::textarea('description', null, ['class'=>'form-control']) !!}
+		</div>
+
+		<div class="form-group">
+			{!! Form::label('url','Url:')!!}
+			{!! Form::text('url', null, ['class'=>'form-control']) !!}
+		</div>
+
+		<div class="form-check">
+			{!! Form::hidden('display', '0', false, ['class'=>'form-check-input']) !!}
+			{!! Form::checkbox('display', '1', true, ['class'=>'form-check-input']) !!}
+			{!! Form::label('display','是否显示', ['class'=>'form-check-label'])!!}
+		</div>
+
+
+		{!! Form::submit('提交', ['class'=>'btn btn-primary form-control']) !!}
 
 	{!! Form::close() !!}
 

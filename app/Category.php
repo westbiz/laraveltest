@@ -10,11 +10,11 @@ class Category extends Model {
 		'name', 'parent_id', 'description',
 	];
 
-	public function child() {
-		return $this->hasMany('App\Category', 'parent_id');
+	public function childCategory() {
+		return $this->hasMany('App\Category', 'parent_id', 'id');
 	}
 
-	public function parent() {
-		return $this->belongsTo('App\Category');
+	public function allChildrenCategories() {
+		return $this->childCategory()->with('allChildrenCategories');
 	}
 }

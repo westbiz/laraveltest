@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title')</title>
+    <title>TX管理系统-@yield('title')</title>
 
     <link href="{{ asset('css/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/css/bootstrap-grid.css') }}" rel="stylesheet">

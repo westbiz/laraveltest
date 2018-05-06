@@ -1,26 +1,22 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Category;
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
-class CategoriesController extends Controller {
+class AdminController extends Controller {
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
-		//
-		// return 'category...';
 		$catalogs = Category::where('parent_id', '=', 0)->get();
-		$childcatas = Category::where('parent_id', '=', 1)->get();
-		$categories = Category::paginate(3);
-		return view('admins.categorylist', compact('categories', 'catalogs', 'childcatas'));
+		$categories = Category::where('parent_id', '=', 0)->paginate(5);
+		// $categories->withPath('admin/categories/q');
+		return view('admins.welcome', compact('categories', 'catalogs'));
 	}
 
 	/**
@@ -30,9 +26,6 @@ class CategoriesController extends Controller {
 	 */
 	public function create() {
 		//
-		$catalogs = Category::where('parent_id', '=', 0)->get();
-		$categories = Category::paginate(3);
-		return view('admins.createcategory', compact('categories', 'catalogs'));
 	}
 
 	/**
@@ -41,11 +34,8 @@ class CategoriesController extends Controller {
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(Requests\CreateCategoryRequest $request) {
+	public function store(Request $request) {
 		//
-
-		dd($request->all());
-		return redirect('/admins/categories');
 	}
 
 	/**
@@ -56,7 +46,6 @@ class CategoriesController extends Controller {
 	 */
 	public function show($id) {
 		//
-		return 'categoryname';
 	}
 
 	/**
@@ -67,11 +56,6 @@ class CategoriesController extends Controller {
 	 */
 	public function edit($id) {
 		//
-		// $catas = array();
-		$catalogs = Category::where('parent_id', '=', 0)->get(['id', 'name']);
-		// dd($catalogs);
-		$category = Category::findOrFail($id);
-		return view('admins.editcategory', compact('category', 'catalogs'));
 	}
 
 	/**
@@ -93,6 +77,5 @@ class CategoriesController extends Controller {
 	 */
 	public function destroy($id) {
 		//
-
 	}
 }
