@@ -29,7 +29,7 @@
 	  <thead class="thead-dark">
 	    <tr>
 	      <th scope="col">#</th>
-	      <th scope="col">name</th>
+	      <th scope="col">title</th>
 	      <th scope="col">parent_id</th>
 	      <th scope="col">url</th>
 	      <th scope="col">description</th>
@@ -41,7 +41,7 @@
 	  <tbody>
 	    <tr>
 	      <th scope="row">{{ $category->id }}</th>
-	      <td><a href="#">{{ $category->name }}</a></td>
+	      <td><a href="#">{{ $category->title }}</a></td>
 	      <td><a href="#">{{ $category->parent_id }}</a></td>
 	      <td><a href="#">{{ $category->url }}</a></td>
 	      <td>{{ $category->description }}</td>

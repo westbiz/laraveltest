@@ -1,6 +1,6 @@
 @extends('admins.default')
 
-@section('title', '编辑分类')
+@section('title', '编辑栏目')
 
 @section('sidebar')
 
@@ -19,17 +19,11 @@
 	</nav>
 	<h3>编辑分类</h3>
 	<hr class="aez">
-	{!! Form::model($category,['method'=>'patch','url'=>'/admin/categories/'.$category->id]) !!}
-		<div class="form-group">
-			{!! Form::label('parent_id','上级分类: ')!!}
-			{{-- array($catalogs[0]->id => $catalogs[0]->title) --}}
-			{!! Form::select('parent_id', $catalogs, null, ['class' => 'input-sm form-control', 'placeholder' => '请选择一个分类']) !!}
-
-		</div>
+	{!! Form::model($catalog,['method'=>'patch','url'=>'/admin/catalogs/'.$catalog->id]) !!}
 
 		<div class="form-group">
-			{!! Form::label('title', '分类名称: ')!!}
-			{!! Form::text('title', null, ['class'=>'form-control']) !!}
+			{!! Form::label('name', '分类名称: ')!!}
+			{!! Form::text('name', null, ['class'=>'form-control']) !!}
 		</div>
 
 		<div class="form-group">

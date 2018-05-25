@@ -26,8 +26,8 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('name', '分类名称: ')!!}
-			{!! Form::text('name', null, ['class'=>'form-control']) !!}
+			{!! Form::label('title', '分类名称: ')!!}
+			{!! Form::text('title', null, ['class'=>'form-control']) !!}
 		</div>
 
 		<div class="form-group">

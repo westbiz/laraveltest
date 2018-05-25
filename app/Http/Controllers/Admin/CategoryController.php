@@ -31,7 +31,7 @@ class CategoryController extends Controller {
 	public function create() {
 		//where('parent_id', '=', 0)->get()
 		$catalogs = Category::all();
-		$parents = $catalogs->pluck('name', 'id');
+		$parents = $catalogs->pluck('title', 'id');
 		$categories = Category::paginate(3);
 		return view('admins.createcategory', compact('categories', 'catalogs', 'parents'));
 	}
@@ -69,8 +69,15 @@ class CategoryController extends Controller {
 	public function edit($id) {
 		//
 		// $catalogs = array();
-		// $catalogs = Category::pluck('name', 'id');
+		// $catalogs = Category::pluck('title', 'id');
 		$catalogs = Category::where('parent_id', '=', 0)->get();
+		// foreach ($catalogs as $cata) {
+		// 	echo $cata->title . ':' . $cata->id . '<br>';
+		// 	$children = Category::where('parent_id', '=', $cata->id)->get();
+		// 	foreach ($children as $child) {
+		// 		echo '　|-' . $child->title . ':' . $child->id . '<br>';
+		// 	}
+		// }
 		// $catalogs = Category::with('allChildrenCategories')->first();
 		// $catalogs = $catas->allChildrenCategories;
 		// dd($catalogs);
